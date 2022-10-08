@@ -134,7 +134,7 @@ main {
     color: black;
 }
 
-.footer {
+.redes {
     display: flex;
     flex-direction: row;
     margin: 3em auto;
