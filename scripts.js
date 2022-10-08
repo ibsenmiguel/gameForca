@@ -5,40 +5,28 @@ function jogarNovamente() {
 }
 
 function lostGame() {
-    // mensagem de alerta
-    // limpar tela e exibir tela para jogar novamente
-
     alert("Você perdeu!!!");
-
     jogarNovamente();
 }
 
 function gameWon() {
-    // mensagem de alerta
-    // limpar tela e exibir tela para jogar novamente
     alert("Você ganhou!!!");
-
     jogarNovamente();
 }
 
 function mostraPalavraErrada(l) {
     let span = document.createElement("span");
-
     let txt = document.createTextNode(l);
-
     span.appendChild(txt);
 
     let cxLtrErr = document.getElementById("cxLtrErr");
-
     cxLtrErr.appendChild(span);
 
     cont2 += 1;
-    console.log(cont2);
-
     if (cont2 == 5) {
         setTimeout(() => {
             lostGame();
-        }, 1);
+        }, 2);
     }
 }
 
@@ -80,7 +68,6 @@ function mostraPalavraCerta(letra) {
         if (letra === tag[i].innerText) {
             tag[i].classList.add("displaySpan1");
 
-            console.log(palavraEscolhida.length);
             cont1 += 1;
             if (cont1 == palavraEscolhida.length) {
                 setTimeout(() => {
@@ -91,11 +78,10 @@ function mostraPalavraCerta(letra) {
     }
 }
 
-// verifica se a letra pressionada é uma letra da palavra ou não
+// se a letra pressionada é uma letra da palavra ou não
 function erroAcerto() {
-    let idx = palavraEscolhida.indexOf(letraPress); // a tecla pressioanda é uma letra da palavra escolhida?
+    let idx = palavraEscolhida.indexOf(letraPress);
 
-    // se acertou, senão errou
     if (idx != -1) {
         mostraPalavraCerta(letraPress);
     } else {
@@ -116,31 +102,19 @@ function letraPressionada() {
 
     if (achei) {
     } else {
-        totLetraPress.push(letraPress); // armazena em uma array a letra pressionada
+        totLetraPress.push(letraPress);
     }
 
     return achei;
 }
 
-// verifica se a tecla pressionada é uma letra e se ja foi pressionada
-function verificaTecla() {
-    let novaLetra = false;
-
-    for (var i = 0; i < letras.length; i++) {
-        if (letraPress === arrLetras[i]) {
-            novaLetra = letraPressionada();
-        }
-    }
-
-    return novaLetra;
-}
-
+// se o que foi pressionado é uma letra e se ja foi pressionada
 function teclaPressionada(e) {
     letraPress = e.key.toUpperCase();
 
     let caractere = arrLetras.indexOf(letraPress);
     if (caractere != -1) {
-        let novaLetra = verificaTecla();
+        let novaLetra = letraPressionada();
 
         if (novaLetra) {
             alert("A tecla ja foi pressionada!!!");
@@ -160,23 +134,19 @@ function informaDica() {
     }
 
     let txt = document.createTextNode(dicas[idxDica]);
-
     cxTxt.appendChild(txt);
 }
 
 function escolherPalavra() {
     let palavra = [];
-
     palavra = palavras[Math.floor(Math.random() * palavras.length)];
 
     return palavra;
 }
 
 function criaTabuleiro() {
-    // sorteia a palavra
     palavraEscolhida = escolherPalavra();
 
-    //criar traços de acordo com o total de letra da palavra
     for (var i = 0; i < palavraEscolhida.length; i++) {
         let span = document.createElement("span");
         let txt = document.createTextNode(palavraEscolhida[i]);
