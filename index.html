@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onselectstart="return false">
+
+    <main>
+        <section class="imgMain">
+            <img src="imagenMain.png" alt="imagem com corda" class="manipularImg">
+        </section>
+        <section id="namegame">
+            <span>J</span>
+            <span>O</span>
+            <span>G</span>
+            <span>O</span>
+            <span></span>
+            <span>D</span>
+            <span>A</span>
+            <span></span>
+            <span>F</span>
+            <span>O</span>
+            <span>R</span>
+            <span>C</span>
+            <span>A</span>
+        </section>
+        <section class="btn-s">
+            <button class="btn" id="btn-1">
+                <div class="start">Start<br></div><div>Palavra aleatória</div>
+            </button>
+            <button class="btn" id="btn-2">Adicionar palavra</button>
+        </section>
+        <div class="spaceQuite">
+            <section class="dica">
+                <div class="caixaDica">
+                    <span>DICA \/</span>
+                    <span id="txtDica"></span>
+                </div>
+            </section>
+            <section class="boneco">
+                <canvas width="300" height="300"></canvas>
+            </section>
+            <section width="300" height="300" class="ltrErr">
+                <span>LETRAS ERRADAS</span>
+                <div id="cxLtrErr">
+                </div>
+            </section>
+        </div>
+        <section class="tracosPalavras" id="tracosPalavras">
+        </section>
+
+        <footer>
+            
+        </footer>
+    </main>
+
+    <script src="scripts.js" type="text/javascript"></script>
+</body>
+</html>

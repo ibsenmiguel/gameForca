@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    width: 100%;
+    height: 1200px;
+}
+
+.manipularImg {
+    width: 300px; /*200*/
+    height: 310px; /*210*/
+    display: flex;
+    margin: 0px 0px 0px 0px; /*-4,7*/
+}
+
+#namegame {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+#namegame span {
+    font-family: cursive;
+    font-size: 40px;
+    border-bottom: 2px solid black;
+    width: 30px;
+    text-align: center;
+}
+
+.btn-s {
+    margin-top: 50px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+}
+
+#btn-1, #btn-2 {
+    width: 250px;
+    font-family: cursive;
+    color: white;
+    background-color: black;
+    border: solid 3px black;
+    padding: 10px;
+}
+
+#btn-1 {
+    border-top-left-radius: 230px 50px;
+    border-top-right-radius: 250px 20px;
+    border-bottom-left-radius: 230px 40px;
+    border-bottom-right-radius: 250px 70px;
+}
+
+.start {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#btn-2 {
+    border-top-left-radius: 230px 10px;
+    border-top-right-radius: 250px 30px;
+    border-bottom-left-radius: 230px 40px;
+    border-bottom-right-radius: 250px 30px;
+    font-size: 25px;
+}
+
+.spaceQuite {
+    display: none;
+    margin: 0 auto;
+    gap: 5em;
+}
+
+.dica {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    gap: 1em;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+.caixaDica {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: auto 0;
+}
+
+.ltrErr {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    margin-top: 1em;
+    gap: 1em;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+.caixaLtrErr {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.tracosPalavras {
+    display: none;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    gap: 10px;
+}
+
+.tracosPalavras span {
+    font-family: cursive;
+    font-size: 40px;
+    border-bottom: 2px solid black;
+    width: 30px;
+    text-align: center;
+}
+
+.displaySpan {
+    color: white;
+}
+
+.displaySpan1 {
+    color: black;
+}
