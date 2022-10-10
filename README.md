@@ -8,4 +8,4 @@
 
   Para acessar o projeto, basta clicar no link abaixo:
   
-  https://ibsenmiguel.github.io/encoderDecoder/
+  https://ibsenmiguel.github.io/gameForca/
